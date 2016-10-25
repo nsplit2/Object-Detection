@@ -80,8 +80,6 @@ int main( int argc, char* argv[] ) {
 	lock.l_pid = getpid();
 	unlock.l_pid = getpid();
 	
-	if( !object_cascade.load( object_cascade_name ) ){ printf("--(!)Error loading cascade\n"); return -1; };
-	
 	memset (&lock, 0, sizeof(lock));
 	memset (&unlock, 0, sizeof(unlock));
 	lock.l_type = F_WRLCK;
